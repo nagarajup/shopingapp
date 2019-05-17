@@ -1,0 +1,129 @@
+<resources>
+    <string name="app_name">My Shopping list</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <!--http://www.convertunitsnow.com/convert-energy-units/calculate-energy-units.aspx-->
+    <string-array name="unit_array">
+        <item>-Unit-</item>
+        <item>Gram</item>
+        <item>Kg</item>
+        <item>Liter</item>
+        <item>Cup</item>
+        <item>Nos</item>
+    </string-array>
+
+    <string-array name="weight_array">
+        <item>-Weight-</item>
+        <item>100</item>
+        <item>250</item>
+        <item>500</item>
+        <item>750</item>
+        <item>1</item>
+        <item>1.5</item>
+        <item>2</item>
+        <item>2.5</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="array_main">
+        <item>Vegetables</item>
+        <item>Furits</item>
+        <item>Refrigerated</item>
+        <item>Frozen</item>
+        <item>Condiments</item>
+        <item>Groceries</item>
+    </string-array>
+
+
+    <string-array name="array_vegetables">
+        <item>Asparagus</item>
+        <item>Broccoli</item>
+        <item>Carrots</item>
+        <item>Cauliflower</item>
+        <item>Celery</item>
+        <item>Corn</item>
+        <item>Cucumbers</item>
+        <item>Lettuce/Greens</item>
+        <item>Mushrooms</item>
+        <item>Onions</item>
+        <item>Peppers</item>
+        <item>Potatoes</item>
+        <item>Spinach</item>
+        <item>Squash</item>
+        <item>Tomatoes</item>
+        <item>Zucchini</item>
+    </string-array>
+
+    <string-array name="array_furits">
+        <item>Apple</item>
+        <item>Avocados</item>
+        <item>Bananas</item>
+        <item>Berries</item>
+        <item>Cherries</item>
+        <item>Grapefruit</item>
+        <item>Grapes</item>
+        <item>Kiwis</item>
+        <item>Lemons / Limes</item>
+        <item>Melon</item>
+        <item>Nectarines</item>
+        <item>Oranges</item>
+        <item>Peaches</item>
+        <item>Pears</item>
+        <item>Plums</item>
+    </string-array>
+    
+    <string-array name="array_refrigerated">
+        <item>Bagels</item>
+        <item>English muffins</item>
+        <item>Chip dip</item>
+        <item>Eggs / Fake eggs</item>
+        <item>Hummus</item>
+        <item>Fruit juice</item>
+        <item>Ready-bake breads</item>
+        <item>Tofu</item>
+        <item>Tortillas</item>
+    </string-array>
+
+    <string-array name="array_frozen">
+        <item>Breakfasts</item>
+        <item>Burritos</item>
+        <item>Fish sticks</item>
+        <item>Fries / Tater tots</item>
+        <item>Ice cream / Sorbet</item>
+        <item>Juice concentrate</item>
+        <item>Pizza / Pizza Rolls</item>
+        <item>Popsicles</item>
+        <item>TV dinners</item>
+        <item>Vegetables</item>
+        <item>Veggie burgers</item>
+    </string-array>
+    
+    <string-array name="array_condiments">
+        <item>BBQ sauce</item>
+        <item>Gravy</item>
+        <item>Honey</item>
+        <item>Hot sauce</item>
+        <item>Jam / Jelly / Preserves</item>
+        <item>Ketchup / Mustard</item>
+        <item>Mayonnaise</item>
+        <item>Pasta sauce</item>
+        <item>Relish</item>
+        <item>Salad dressing</item>
+        <item>Salsa</item>
+        <item>Soy sauce</item>
+        <item>Steak sauce</item>
+        <item>Syrup</item>
+        <item>Worcestershire sauce</item>
+    </string-array>
+
+</resources>
