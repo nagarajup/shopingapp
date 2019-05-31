@@ -4,30 +4,33 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_main_title"
-
     android:orientation="vertical"
-    android:padding="10sp">
+    android:padding="7sp">
+    <!---->
 
-    <LinearLayout
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
+        android:tag="sticky"
+        android:background="@color/white"
         android:layout_height="wrap_content"
-
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_maintitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:tag="sticky"
             android:drawableEnd="@mipmap/arrow_click"
             android:drawableRight="@mipmap/arrow_click"
+            android:drawableTint="@color/colorPrimaryDark"
             android:drawablePadding="5dp"
-            android:padding="10dp"
+            android:fontFamily="@font/cera_gr_bold"
+            android:padding="5dp"
             android:text="maintitle"
-            android:textColor="#ffffff"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:textSize="18sp"
+            />
 
-    </LinearLayout>
+    </android.support.v7.widget.CardView>
 
     <LinearLayout
         android:id="@+id/lay_child"
