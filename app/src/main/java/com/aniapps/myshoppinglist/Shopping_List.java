@@ -53,12 +53,10 @@ public class Shopping_List extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String[] strings = new String[allNotes.size()];
-                boolean[] myChecks = new boolean[allChecks.size()];
-
+                mySelectedList=new ArrayList<>();
                 for (int k = 0; k < allChecks.size(); k++) {
                     if(allChecks.get(k).isChecked()){
-                        subList=new SubList(0,allTitles.get(k).getText().toString(),allUnits.get(k).getText().toString(),allNotes.get(k).getText().toString(),true);
+                        subList=new SubList(categoryTitle.get(k).toString(),0,allTitles.get(k).getText().toString(),allUnits.get(k).getText().toString(),allNotes.get(k).getText().toString(),true);
                         mySelectedList.add(subList);
                     }
                 }
@@ -72,8 +70,9 @@ public class Shopping_List extends AppCompatActivity
                 }*/
 
                 for (int i = 0; i < mySelectedList.size(); i++) {
-                    Log.e("My List: ", mySelectedList.get(i).getNote());
-                    Log.e("My List: ", mySelectedList.get(i).getSub_title());
+
+                    Log.e("My List: ", mySelectedList.get(i).getCategory()+": "+mySelectedList.get(i).getSub_title()+" "+ mySelectedList.get(i).getQuantity()+" "+mySelectedList.get(i).getNote());
+
 
                 }
 
@@ -145,6 +144,8 @@ public class Shopping_List extends AppCompatActivity
 
         }
 
+        //https://trinitytuts.com/create-pdf-file-in-android/
+        //https://medium.com/android-school/exploring-itext-to-create-pdf-in-android-5577881998c8
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -156,6 +157,7 @@ public class Shopping_List extends AppCompatActivity
     View subRow, childRow;
     int row_index = 0, veg_index = 0;
     TextView tv_maintitle;
+    List<String> categoryTitle = new ArrayList<String>();
     List<TextView> allTitles = new ArrayList<TextView>();
     List<CheckBox> allChecks = new ArrayList<CheckBox>();
     List<EditText> allNotes = new ArrayList<EditText>();
@@ -187,13 +189,14 @@ public class Shopping_List extends AppCompatActivity
                     for (String aVegList : veg_list) {
                         LayoutInflater mInflater1 = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                         View laychild = mInflater1.inflate(R.layout.child_layout, null);
-                        TextView tv_maintitle = (TextView) laychild.findViewById(R.id.tv_childtitle);
+                        TextView tv_childtitle = (TextView) laychild.findViewById(R.id.tv_childtitle);
                         ImageView list_image = (ImageView) laychild.findViewById(R.id.list_image);
                         CheckBox cb_child = (CheckBox) laychild.findViewById(R.id.cb_child);
                         EditText et_units = (EditText) laychild.findViewById(R.id.et_units);
                         EditText et_notes = (EditText) laychild.findViewById(R.id.et_notes);
-                        tv_maintitle.setText(aVegList);
-                        allTitles.add(tv_maintitle);
+                        tv_childtitle.setText(aVegList);
+                        categoryTitle.add(main_list[0]);
+                        allTitles.add(tv_childtitle);
                         allChecks.add(cb_child);
                         allUnits.add(et_units);
                         allNotes.add(et_notes);
@@ -201,16 +204,18 @@ public class Shopping_List extends AppCompatActivity
                     }
                     break;
                 case 1:
+
                     for (String aVegList : furits_list) {
                         LayoutInflater mInflater1 = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                         View laychild = mInflater1.inflate(R.layout.child_layout, null);
-                        TextView tv_maintitle = (TextView) laychild.findViewById(R.id.tv_childtitle);
+                        TextView tv_childtitle = (TextView) laychild.findViewById(R.id.tv_childtitle);
                         ImageView list_image = (ImageView) laychild.findViewById(R.id.list_image);
                         CheckBox cb_child = (CheckBox) laychild.findViewById(R.id.cb_child);
                         EditText et_units = (EditText) laychild.findViewById(R.id.et_units);
                         EditText et_notes = (EditText) laychild.findViewById(R.id.et_notes);
-                        tv_maintitle.setText(aVegList);
-                        allTitles.add(tv_maintitle);
+                        tv_childtitle.setText(aVegList);
+                        categoryTitle.add(main_list[1]);
+                        allTitles.add(tv_childtitle);
                         allChecks.add(cb_child);
                         allUnits.add(et_units);
                         allNotes.add(et_notes);
@@ -220,16 +225,18 @@ public class Shopping_List extends AppCompatActivity
                     }
                     break;
                 case 2:
+
                     for (String aVegList : refrigerated_list) {
                         LayoutInflater mInflater1 = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                         View laychild = mInflater1.inflate(R.layout.child_layout, null);
-                        TextView tv_maintitle = (TextView) laychild.findViewById(R.id.tv_childtitle);
+                        TextView tv_childtitle = (TextView) laychild.findViewById(R.id.tv_childtitle);
                         ImageView list_image = (ImageView) laychild.findViewById(R.id.list_image);
                         CheckBox cb_child = (CheckBox) laychild.findViewById(R.id.cb_child);
                         EditText et_units = (EditText) laychild.findViewById(R.id.et_units);
                         EditText et_notes = (EditText) laychild.findViewById(R.id.et_notes);
-                        tv_maintitle.setText(aVegList);
-                        allTitles.add(tv_maintitle);
+                        tv_childtitle.setText(aVegList);
+                        categoryTitle.add(main_list[2]);
+                        allTitles.add(tv_childtitle);
                         allChecks.add(cb_child);
                         allUnits.add(et_units);
                         allNotes.add(et_notes);
@@ -237,16 +244,18 @@ public class Shopping_List extends AppCompatActivity
                     }
                     break;
                 default:
+
                     for (String aVegList : frozen_list) {
                         LayoutInflater mInflater1 = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                         View laychild = mInflater1.inflate(R.layout.child_layout, null);
-                        TextView tv_maintitle = (TextView) laychild.findViewById(R.id.tv_childtitle);
+                        TextView tv_childtitle = (TextView) laychild.findViewById(R.id.tv_childtitle);
                         ImageView list_image = (ImageView) laychild.findViewById(R.id.list_image);
                         CheckBox cb_child = (CheckBox) laychild.findViewById(R.id.cb_child);
                         EditText et_units = (EditText) laychild.findViewById(R.id.et_units);
                         EditText et_notes = (EditText) laychild.findViewById(R.id.et_notes);
-                        tv_maintitle.setText(aVegList);
-                        allTitles.add(tv_maintitle);
+                        tv_childtitle.setText(aVegList);
+                        categoryTitle.add(main_list[3]);
+                        allTitles.add(tv_childtitle);
                         allChecks.add(cb_child);
                         allUnits.add(et_units);
                         allNotes.add(et_notes);
@@ -255,7 +264,9 @@ public class Shopping_List extends AppCompatActivity
                     break;
 
             }
-            mySelectedList.add(subList);
+          //  mySelectedList.add(subList);
+            //  mainTitle.add("Condiments");
+            //                    mainTitle.add("Groceries");
 
 
             tv_maintitle.setOnClickListener(new View.OnClickListener() {

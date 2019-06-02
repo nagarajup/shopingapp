@@ -24,7 +24,7 @@
             android:drawableRight="@mipmap/arrow_click"
             android:drawableTint="@color/colorPrimaryDark"
             android:drawablePadding="5dp"
-            android:fontFamily="@font/cera_gr_bold"
+            android:fontFamily="@font/cera_gr_medium"
             android:padding="5dp"
             android:text="maintitle"
             android:textSize="18sp"

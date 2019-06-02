@@ -1,19 +1,29 @@
 package com.aniapps.myshoppinglist;
 
 public class SubList {
-    String sub_title = "", quantity = "", note = "";
+
+    String category="",sub_title = "", quantity = "", note = "";
     int img = 0;
     boolean tick;
 
     public SubList() {
     }
 
-    public SubList(int img, String sub_title, String quantity, String note, boolean tick) {
+    public SubList(String category,int img, String sub_title, String quantity, String note, boolean tick) {
+        this.category=category;
         this.img = img;
         this.sub_title = sub_title;
         this.quantity = quantity;
         this.note = note;
         this.tick = tick;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getSub_title() {
